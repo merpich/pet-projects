@@ -1,0 +1,71 @@
+:root {
+	--bgc-main: #F2F4F6;
+	--bgc-second: #FFFFFF;
+	--ca-main: #E27D60;
+	--ca-second: #D8EEFE;
+	--ca-second-hover: #90B4CE;
+	--ca-third: #41B3A3;
+	--fc-main: #094067;
+	--fc-second: #5F6C7B;
+}
+
+*,
+::after,
+::before {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body {
+	background-color: var(--bgc-main);
+	font-family: 'Raleway', sans-serif;
+	font-weight: 500;
+	font-variant-numeric: lining-nums;
+	color: var(--fc-main);
+}
+
+.wrapper {
+	display: flex;
+	justify-content: center;
+	padding: 20vh 0 5vh;
+}
+
+.main {
+	display: grid;
+	gap: 20px 0;
+	max-width: 600px;
+	padding: 25px;
+	border-radius: 20px;
+	background-color: var(--bgc-second);
+}
+
+.nav {
+	display: grid;
+	gap: 20px;
+}
+
+@media (min-width: 480px) {
+	.nav {
+		grid-template-columns: repeat(2, 1fr);
+	}
+}
+
+.nav-link {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	padding: 10px 15px;
+	border-radius: 10px;
+	font-size: 18px;
+	font-weight: 600;
+	text-align: center;
+	text-decoration: none;
+	color: var(--fc-main);
+	background-color: var(--ca-second);
+	transition: background-color .2s ease-in-out
+}
+
+.nav-link:hover {
+	background-color: var(--ca-second-hover);
+}
